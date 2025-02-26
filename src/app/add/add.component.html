@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h2>Add IPL Team</h2>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Team Name</label>
+        <input type="text" id="name" [(ngModel)]="iplTeam.name" name="name" required />
+      </div>
+      <div>
+        <label for="trophies">Trophies</label>
+        <input type="number" id="trophies" [(ngModel)]="iplTeam.trophies" name="trophies" required />
+      </div>
+      <div>
+        <label for="captainName">Captain Name</label>
+        <input type="text" id="captainName" [(ngModel)]="iplTeam.captainName" name="captainName" required />
+      </div>
+  
+      <button type="submit" [disabled]="!iplTeam.name || !iplTeam.trophies || !iplTeam.captainName">Add Team</button>
+    </form>
+  
+    <div *ngIf="message" class="message">
+      {{ message }}
+    </div>
+  </div>
+   

@@ -1,0 +1,45 @@
+<h1>IPL Team Management</h1>
+<button (click)="loadData()">Load Data</button>
+
+<table border="1">
+  <tr>
+    <th> S No</th>
+    <th> Name</th>
+    <th> Trophies</th>
+    <th> Captain Name</th>
+    <th> Update</th>
+    <th> Action</th>
+  </tr>
+
+  <tr *ngFor="let item of list; let i = index">
+    <td>{{i + 1}}</td>
+
+    <!-- Name -->
+    <td *ngIf="editingIndex !== item.id">{{ item.name }}</td>
+    <td *ngIf="editingIndex === item.id">
+      <input [(ngModel)]="editTeam.name" />
+    </td>
+
+    <!-- Trophies -->
+    <td *ngIf="editingIndex !== item.id">{{ item.trophies }}</td>
+    <td *ngIf="editingIndex === item.id">
+      <input type="number" [(ngModel)]="editTeam.trophies" />
+    </td>
+
+    <!-- Captain Name -->
+    <td *ngIf="editingIndex !== item.id">{{ item.captainName }}</td>
+    <td *ngIf="editingIndex === item.id">
+      <input [(ngModel)]="editTeam.captainName" />
+    </td>
+
+    <!-- Buttons -->
+    <td>
+      <button *ngIf="editingIndex !== item.id" (click)="edit(item)">Update</button>
+      <button *ngIf="editingIndex === item.id" (click)="saveUpdate()">Save</button>
+    </td>
+    
+    <td><button (click)="deleteItem(item.id)">Delete</button></td>
+  </tr>
+</table>
+
+<app-add></app-add>

@@ -1,0 +1,77 @@
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 20px;
+  padding: 0;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: hsl(332, 100%, 50%);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Buttons */
+button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Update Button */
+.update-btn {
+  background-color: hsl(134, 61%, 41%);
+  color: red;
+}
+.update-btn:hover {
+  background-color: #218838;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Add Team Button */
+.navigate-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.navigate-btn:hover {
+  background-color: #00e056;
+}
