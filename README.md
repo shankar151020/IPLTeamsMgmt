@@ -1,0 +1,2 @@
+# IPLTeamsMgmt
+Describes CRUD operations
